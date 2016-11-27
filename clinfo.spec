@@ -1,6 +1,6 @@
 Name:           clinfo
 Version:        2.1.16.01.12
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Enumerate OpenCL platforms and devices
 
 License:        Public Domain
@@ -8,7 +8,7 @@ URL:            https://github.com/Oblomov/clinfo
 Source0:        https://github.com/Oblomov/clinfo/archive/%{version}.tar.gz
 
 BuildRequires:  opencl-headers
-BuildRequires:  opencl-icd-loader-devel
+BuildRequires:  ocl-icd-devel
 
 
 %description
@@ -45,5 +45,8 @@ cp -a man/clinfo.1 %{buildroot}/%{_mandir}/man1/
 
 
 %changelog
+* Sun Nov 27 2016 Jajauma's Packages <jajauma@yandex.ru> - 2.1.16.01.12-2
+- Require ocl-icd-devel for building
+
 * Fri Oct 07 2016 Jajauma's Packages <jajauma@yandex.ru> - 2.1.16.01.12-1
 - Public release
